@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#athletePlaysForNOC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#athletePlaysForNOC">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#belongsToNOC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#belongsToNOC">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#coachesDiscipline -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#coachesDiscipline">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplineCoachedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#coachesForNOC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#coachesForNOC">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#coachesTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#coachesTeam">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamCoachedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplineCoachedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplineCoachedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplinePlayedByAthlete -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplinePlayedByAthlete">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#playsDiscipline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplinePlayedByTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplinePlayedByTeam">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#hasAthlete -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#hasAthlete">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#hasCoach -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#hasCoach">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#hasTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#hasTeam">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#isPlayedByTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#isPlayedByTeam">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#playsCategory"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Category"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#playsCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#playsCategory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#playsDiscipline -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#playsDiscipline">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#receivedMedal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#receivedMedal">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Award"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamCoachedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamCoachedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamPlaysDiscipline -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamPlaysDiscipline">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamPlaysForNOC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamPlaysForNOC">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#dateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#dateOfBirth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#femaleAthletes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#femaleAthletes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#gender">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#maleAthletes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#maleAthletes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#placeOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#placeOfBirth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#rankByGold -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#rankByGold">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#rankByTotalMedals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#rankByTotalMedals">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Award"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#totalAthletes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#totalAthletes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#wonBronzeMedals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#wonBronzeMedals">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#wonGoldMedals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#wonGoldMedals">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#wonSilverMedals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#wonSilverMedals">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#playsDiscipline"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#athletePlaysForNOC"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Award -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Award">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Bronze_Medal"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Gold_Medal"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Silver_Medal"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Category"/>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#coachesDiscipline"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#coachesTeam"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#coachesForNOC"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#hasAthlete"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#hasCoach"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#hasTeam"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamCoachedBy"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#playsCategory"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Category"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamPlaysDiscipline"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#teamPlaysForNOC"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#National_Olympic_Committee"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#sports_discipline">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplineCoachedBy"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Coach"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplinePlayedByAthlete"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Athlete"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#disciplinePlayedByTeam"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Team"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Bronze_Medal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Bronze_Medal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Award"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Gold_Medal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Gold_Medal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Award"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Silver_Medal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Silver_Medal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#Award"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
