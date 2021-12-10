@@ -1,0 +1,3640 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4"
+         xmlns="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/areeshamaqsood/ontologies/2021/11/untitled-ontology-4"/>
+
+<owl:ObjectProperty rdf:about="#athletePlaysForNOC">
+  <rdfs:domain rdf:resource="#Athlete"/>
+  <rdfs:range rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#coachesDiscipline">
+  <rdfs:domain rdf:resource="#Coach"/>
+  <rdfs:range rdf:resource="#sports_discipline"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#disciplineCoachedBy"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#disciplineCoachedBy">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#coachesForNOC">
+  <rdfs:domain rdf:resource="#Coach"/>
+  <rdfs:range rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#coachesTeam">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Coach"/>
+  <rdfs:range rdf:resource="#Team"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#teamCoachedBy"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#teamCoachedBy">
+  <rdfs:domain rdf:resource="#Team"/>
+  <rdfs:range rdf:resource="#Coach"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#disciplinePlayedByAthlete">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#playsDiscipline"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#playsDiscipline">
+  <rdfs:domain rdf:resource="#Athlete"/>
+  <rdfs:range rdf:resource="#sports_discipline"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#disciplinePlayedByTeam">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#teamPlaysDiscipline"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#teamPlaysDiscipline">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasAthlete">
+  <rdfs:domain rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:range rdf:resource="#Athlete"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCoach">
+  <rdfs:domain rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:range rdf:resource="#Coach"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasTeam">
+  <rdfs:domain rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:range rdf:resource="#Team"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isPlayedByTeam">
+  <rdfs:domain rdf:resource="#Category"/>
+  <rdfs:range rdf:resource="#Team"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#playsCategory"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#playsCategory">
+  <rdfs:domain rdf:resource="#Team"/>
+  <rdfs:range rdf:resource="#Category"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#receivedMedal">
+  <rdfs:domain rdf:resource="#Athlete"/>
+  <rdfs:domain rdf:resource="#Team"/>
+  <rdfs:range rdf:resource="#Award"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#teamPlaysForNOC">
+  <rdfs:domain rdf:resource="#Team"/>
+  <rdfs:range rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#femaleAthletes">
+  <rdfs:domain rdf:resource="#sports_discipline"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#maleAthletes">
+  <rdfs:domain rdf:resource="#sports_discipline"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#rankByGold">
+  <rdfs:domain rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#rankByTotalMedals">
+  <rdfs:domain rdf:resource="#Award"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#teamName">
+  <rdfs:domain rdf:resource="#Team"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#totalAthletes">
+  <rdfs:domain rdf:resource="#sports_discipline"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#wonBronzeMedals">
+  <rdfs:domain rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#wonGoldMedals">
+  <rdfs:domain rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#wonSilverMedals">
+  <rdfs:domain rdf:resource="#National_Olympic_Committee"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Athlete">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#playsDiscipline"/>
+          <owl:onClass rdf:resource="#sports_discipline"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#athletePlaysForNOC"/>
+          <owl:onClass rdf:resource="#National_Olympic_Committee"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <owl:disjointWith rdf:resource="#Team"/>
+</owl:Class>
+
+<owl:Class rdf:about="#National_Olympic_Committee">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasAthlete"/>
+          <owl:onClass rdf:resource="#Athlete"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasCoach"/>
+          <owl:onClass rdf:resource="#Coach"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasTeam"/>
+          <owl:onClass rdf:resource="#Team"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#rankByGold"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#rankByTotalMedals"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#wonBronzeMedals"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#wonGoldMedals"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#wonSilverMedals"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Coach">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#coachesDiscipline"/>
+          <owl:onClass rdf:resource="#sports_discipline"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#coachesTeam"/>
+          <owl:onClass rdf:resource="#Team"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#coachesForNOC"/>
+          <owl:onClass rdf:resource="#National_Olympic_Committee"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <owl:disjointWith rdf:resource="#Team"/>
+</owl:Class>
+
+<owl:Class rdf:about="#sports_discipline">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#disciplineCoachedBy"/>
+          <owl:onClass rdf:resource="#Coach"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#disciplinePlayedByAthlete"/>
+          <owl:onClass rdf:resource="#Athlete"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#disciplinePlayedByTeam"/>
+          <owl:onClass rdf:resource="#Team"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#femaleAthletes"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#maleAthletes"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#totalAthletes"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Team">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#teamCoachedBy"/>
+          <owl:onClass rdf:resource="#Coach"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#playsCategory"/>
+          <owl:onClass rdf:resource="#Category"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#teamPlaysDiscipline"/>
+          <owl:onClass rdf:resource="#sports_discipline"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#teamPlaysForNOC"/>
+          <owl:onClass rdf:resource="#National_Olympic_Committee"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#teamName"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Category">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#isPlayedByTeam"/>
+      <owl:onClass rdf:resource="#Team"/>
+      <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </owl:Restriction>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Award">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:oneOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Bronze_Medal"/>
+        <rdf:Description rdf:about="#Gold_Medal"/>
+        <rdf:Description rdf:about="#Silver_Medal"/>
+      </owl:oneOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<Award rdf:about="#Bronze_Medal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Award>
+
+<Award rdf:about="#Gold_Medal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Award>
+
+<Award rdf:about="#Silver_Medal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Award>
+
+<rdf:Description rdf:about="#sada">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<owl:Thing rdf:about="#Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Japan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#3x3_Basketball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#ROC">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Sailing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Portugal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Rowing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Netherlands">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Artistic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#France">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Lithuania">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#South_Africa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Equestrian">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Germany">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Ukraine">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Austria">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Spain">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Boxing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Marathon_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Hungary">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Tajikistan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Argentina">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Denmark">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Judo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Sri_Lanka">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Rugby_Sevens">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#People's_Republic_of_China">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Switzerland">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Shooting">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Czech_Republic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Badminton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Myanmar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Great_Britain">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Ireland">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Wrestling">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#United_States_of_America">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Karate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Ethiopia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Hockey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Modern_Pentathlon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Italy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mongolia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#India">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Islamic_Republic_of_Iran">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Australia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Uganda">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Croatia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Saudi_Arabia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Georgia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Kazakhstan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Dominican_Republic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cycling_Road">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Nicaragua">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Honduras">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Golf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Norway">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Republic_of_Korea">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cyprus">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Israel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Canoe_Slalom">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Canada">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Belarus">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Uruguay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Poland">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Uzbekistan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Triathlon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Baseball/Softball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Kenya">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Canoe_Sprint">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Sweden">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Ghana">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Basketball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Serbia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Greece">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Artistic_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cayman_Islands">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Weightlifting">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Egypt">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Bosnia_and_Herzegovina">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Montenegro">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Brazil">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Bahamas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Diving">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Jamaica">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Skateboarding">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Turkey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Romania">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Congo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cycling_BMX_Racing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Burundi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mexico">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Singapore">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Papua_New_Guinea">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Virgin_Islands,_US">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cycling_Mountain_Bike">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Chile">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mozambique">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Taekwondo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Côte_d'Ivoire">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Hong_Kong,_China">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#American_Samoa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Indonesia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Tunisia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Latvia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cameroon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Bahrain">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Colombia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Luxembourg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#New_Zealand">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Gambia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Belgium">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Samoa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Haiti">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Qatar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Marshall_Islands">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Suriname">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Algeria">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Bulgaria">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Vietnam">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cuba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Puerto_Rico">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Estonia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Venezuela">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Slovakia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Refugee_Olympic_Team">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Malta">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Chinese_Taipei">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Ecuador">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Sport_Climbing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Pakistan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Comoros">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#North_Macedonia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Sao_Tome_and_Principe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Kosovo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Botswana">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Trinidad_and_Tobago">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Slovenia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Armenia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Republic_of_Moldova">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Turkmenistan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Morocco">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Nigeria">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Antigua_and_Barbuda">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Andorra">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Zambia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Angola">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Finland">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Maldives">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Kyrgyzstan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Guinea">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Afghanistan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Surfing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Chad">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Eswatini">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Fiji">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cycling_BMX_Freestyle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cambodia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Solomon_Islands">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Lao_People's_Democratic_Republic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Trampoline_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Eritrea">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Azerbaijan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Benin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Philippines">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Guyana">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#United_Republic_of_Tanzania">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Kiribati">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Barbados">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Malawi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Palau">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Malaysia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Sudan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Nepal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#El_Salvador">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Democratic_Republic_of_the_Congo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Thailand">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cape_Verde">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Cook_Islands">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Senegal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Syrian_Arab_Republic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Bolivia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Peru">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Namibia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Niger">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Liechtenstein">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Grenada">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Dominica">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Yemen">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Guatemala">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Lebanon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Bangladesh">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Tuvalu">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Jordan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Togo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Costa_Rica">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Federated_States_of_Micronesia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Monaco">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Somalia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Zimbabwe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#St_Vincent_and_the_Grenadines">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Burkina_Faso">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Guam">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Guinea-Bissau">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Libya">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Djibouti">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Iraq">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Panama">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Iceland">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Equatorial_Guinea">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mauritius">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mali">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Tonga">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Madagascar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Kuwait">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Palestine">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Paraguay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Virgin_Islands,_British">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#San_Marino">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Lesotho">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Seychelles">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Rwanda">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Belize">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Sierra_Leone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Saint_Lucia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Saint_Kitts_and_Nevis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Vanuatu">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Brunei_Darussalam">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#United_Arab_Emirates">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Democratic_Republic_of_Timor-Leste">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Gabon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Central_African_Republic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Oman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Albania">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#South_Sudan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Bhutan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mauritania">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Liberia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Nauru">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Aruba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Bermuda">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#KONISHI_Anna">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Japan"/>
+  <playsDiscipline rdf:resource="#Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#FROLKINA_Evgeniia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#ROC"/>
+  <playsDiscipline rdf:resource="#3x3_Basketball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#COSTA_Pedro">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Portugal"/>
+  <playsDiscipline rdf:resource="#Sailing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#de_JONG_Roos">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Netherlands"/>
+  <playsDiscipline rdf:resource="#Rowing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#FRIESS_Aline">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#France"/>
+  <playsDiscipline rdf:resource="#Artistic_Gymnastics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#BERNOTAS_Juozas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Lithuania"/>
+  <playsDiscipline rdf:resource="#Sailing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#MOTAU_Boati">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#South_Africa"/>
+  <playsDiscipline rdf:resource="#Water_Polo"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#PANKOV_Pavel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#ROC"/>
+  <playsDiscipline rdf:resource="#Volleyball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#SCHNEIDER_Dorothee">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Germany"/>
+  <playsDiscipline rdf:resource="#Equestrian"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#PESOTSKA_Margaryta">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Ukraine"/>
+  <playsDiscipline rdf:resource="#Table_Tennis"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#AUBOECK_Felix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Austria"/>
+  <playsDiscipline rdf:resource="#Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#TORRES_Pau">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Spain"/>
+  <playsDiscipline rdf:resource="#Football"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#FONTIJN_Nouchka">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Netherlands"/>
+  <playsDiscipline rdf:resource="#Boxing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#STEENBERGEN_Marrit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Netherlands"/>
+  <playsDiscipline rdf:resource="#Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#OLASZ_Anna">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Hungary"/>
+  <playsDiscipline rdf:resource="#Marathon_Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#TYURINA_Anastasiya">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Tajikistan"/>
+  <playsDiscipline rdf:resource="#Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#GIGLER_Heiko">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Austria"/>
+  <playsDiscipline rdf:resource="#Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#LANGE_Santiago_Raul">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Argentina"/>
+  <playsDiscipline rdf:resource="#Sailing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#FLARUP_Peter_T.">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Denmark"/>
+  <playsDiscipline rdf:resource="#Equestrian"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#REPIYALLAGE_Chamara">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Sri_Lanka"/>
+  <playsDiscipline rdf:resource="#Judo"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#TANG_Minglin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <playsDiscipline rdf:resource="#Rugby_Sevens"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#HEINZER_Max">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Switzerland"/>
+  <playsDiscipline rdf:resource="#Fencing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#LIPTAK_Jiri">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Czech_Republic"/>
+  <playsDiscipline rdf:resource="#Shooting"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#GROENEN_Jackie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Netherlands"/>
+  <playsDiscipline rdf:resource="#Football"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#THET_HTAR_Thuzar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Myanmar"/>
+  <playsDiscipline rdf:resource="#Badminton"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#FERNANDEZ_Alberto">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Spain"/>
+  <playsDiscipline rdf:resource="#Shooting"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#BROWN_Abbie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Great_Britain"/>
+  <playsDiscipline rdf:resource="#Rugby_Sevens"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#IRVINE_Brendan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Ireland"/>
+  <playsDiscipline rdf:resource="#Boxing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#OMAROV_Artur">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Czech_Republic"/>
+  <playsDiscipline rdf:resource="#Wrestling"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#MEIN_Derrick_Scott">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#United_States_of_America"/>
+  <playsDiscipline rdf:resource="#Shooting"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#PITMAN_Bryony">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Great_Britain"/>
+  <playsDiscipline rdf:resource="#Archery"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#HEURTAULT_Leila">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#France"/>
+  <playsDiscipline rdf:resource="#Karate"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#GEBREEZIBEHER_Freweyni">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Ethiopia"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#URAZOVA_Vladislava">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#ROC"/>
+  <playsDiscipline rdf:resource="#Artistic_Gymnastics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#RUIZ_TORRUELLA_Vicenc">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Spain"/>
+  <playsDiscipline rdf:resource="#Hockey"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#VLOON_Menno">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Netherlands"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#SOTERO_Alice">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Italy"/>
+  <playsDiscipline rdf:resource="#Modern_Pentathlon"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#BORGA_Rebecca">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Italy"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#OYUNBAT_Yesugen">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Mongolia"/>
+  <playsDiscipline rdf:resource="#Shooting"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#SINGH_Simranjeet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#India"/>
+  <playsDiscipline rdf:resource="#Hockey"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#GENTILI_Giacomo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Italy"/>
+  <playsDiscipline rdf:resource="#Rowing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#MOUSAVI_Seyedshahin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Islamic_Republic_of_Iran"/>
+  <playsDiscipline rdf:resource="#Boxing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#VALENTE_Jennifer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#United_States_of_America"/>
+  <playsDiscipline rdf:resource="#Cycling_Track"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#LIMA_Bruno">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Argentina"/>
+  <playsDiscipline rdf:resource="#Volleyball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#PONTI_Noe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Switzerland"/>
+  <playsDiscipline rdf:resource="#Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#McDERMOTT_Nicola">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Australia"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#CHEPTEGEI_Joshua">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Uganda"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#GERMANIER_Sabrina_Soledad">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Argentina"/>
+  <playsDiscipline rdf:resource="#Volleyball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#FANTELA_Sime">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Croatia"/>
+  <playsDiscipline rdf:resource="#Sailing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#WEIGAND_Justus">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Germany"/>
+  <playsDiscipline rdf:resource="#Hockey"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#HUANG_Kaifeng">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <playsDiscipline rdf:resource="#Rowing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#ALTENBURG_Lisa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Germany"/>
+  <playsDiscipline rdf:resource="#Hockey"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#SEDOYKINA_Anna">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#ROC"/>
+  <playsDiscipline rdf:resource="#Handball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#ALDAWSARI_Khalifah">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Saudi_Arabia"/>
+  <playsDiscipline rdf:resource="#Football"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#REVISHVILI_Irakli">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Georgia"/>
+  <playsDiscipline rdf:resource="#Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#PUTINTSEVA_Yulia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Kazakhstan"/>
+  <playsDiscipline rdf:resource="#Tennis"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#RIZZO_Tatiana_Soledad">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Argentina"/>
+  <playsDiscipline rdf:resource="#Volleyball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#de_la_CRUZ_BAEZ_Alexy_Miguel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Dominican_Republic"/>
+  <playsDiscipline rdf:resource="#Boxing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#THOMPSON_Ria">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Australia"/>
+  <playsDiscipline rdf:resource="#Rowing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#KANEKO_Hiromi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Japan"/>
+  <playsDiscipline rdf:resource="#Cycling_Road"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#JAKOBSEN_Emil">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Denmark"/>
+  <playsDiscipline rdf:resource="#Handball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#SCHUTZMEIER_Maria_Victoria">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Nicaragua"/>
+  <playsDiscipline rdf:resource="#Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#NUNEZ_Jonathan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Honduras"/>
+  <playsDiscipline rdf:resource="#Football"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#MASSON_Caroline">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Germany"/>
+  <playsDiscipline rdf:resource="#Golf"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#HYNNE_Hedda">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Norway"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#SEIDEMANN_Melissa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#United_States_of_America"/>
+  <playsDiscipline rdf:resource="#Water_Polo"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#GLAETZER_Matthew">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Australia"/>
+  <playsDiscipline rdf:resource="#Cycling_Track"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#KIM_Dong_Seon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Republic_of_Korea"/>
+  <playsDiscipline rdf:resource="#Equestrian"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#TRAJKOVIC_Milan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Cyprus"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#SHAPIRA_Omer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Israel"/>
+  <playsDiscipline rdf:resource="#Cycling_Road"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#McLAUGHLIN_Sydney">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#United_States_of_America"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#HODGKINS_BYRNE_Mathilda">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Great_Britain"/>
+  <playsDiscipline rdf:resource="#Rowing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#MAHEU_Florence">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Canada"/>
+  <playsDiscipline rdf:resource="#Canoe_Slalom"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#ZHODZIK_Maryia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Belarus"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#MARTINEZ_Enzo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Uruguay"/>
+  <playsDiscipline rdf:resource="#Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#FAJDEK_Pawel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Poland"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#MATNIYAZOVA_Gulnoza">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Uzbekistan"/>
+  <playsDiscipline rdf:resource="#Judo"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#BLUMMENFELT_Kristian">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Norway"/>
+  <playsDiscipline rdf:resource="#Triathlon"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#KATZ_Nathan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Australia"/>
+  <playsDiscipline rdf:resource="#Judo"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#YAMADA_Aki">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Japan"/>
+  <playsDiscipline rdf:resource="#Hockey"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#BECKIE_Janine">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Canada"/>
+  <playsDiscipline rdf:resource="#Football"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#FIODOROW_Joanna">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Poland"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#FRENCH_Kate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Great_Britain"/>
+  <playsDiscipline rdf:resource="#Modern_Pentathlon"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#YAMADA_Tetsuto">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Japan"/>
+  <playsDiscipline rdf:resource="#Baseball/Softball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#SANCHEZ_HERRERO_Ricardo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Spain"/>
+  <playsDiscipline rdf:resource="#Hockey"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#WAIRIMU_Jane_Wacu">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Kenya"/>
+  <playsDiscipline rdf:resource="#Volleyball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#STENSILS_Linnea">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Sweden"/>
+  <playsDiscipline rdf:resource="#Canoe_Sprint"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#HENDERSON_Brooke">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Canada"/>
+  <playsDiscipline rdf:resource="#Golf"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#BOJE_Alexandra">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Denmark"/>
+  <playsDiscipline rdf:resource="#Badminton"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#ANANI_Kwadjo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Ghana"/>
+  <playsDiscipline rdf:resource="#Judo"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#DUJSHEBAEV_DOVICHEBAEVA_Alex">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Spain"/>
+  <playsDiscipline rdf:resource="#Handball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#SWIATEK_Iga">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Poland"/>
+  <playsDiscipline rdf:resource="#Tennis"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#ANDERSON_Yvonne">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Serbia"/>
+  <playsDiscipline rdf:resource="#Basketball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#PAPANASTASIOU_Alexandros">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Greece"/>
+  <playsDiscipline rdf:resource="#Water_Polo"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#AUDA_Patrik">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Czech_Republic"/>
+  <playsDiscipline rdf:resource="#Basketball"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#BORCH_Kjetil">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Norway"/>
+  <playsDiscipline rdf:resource="#Rowing"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#KYOGOKU_Okina">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Japan"/>
+  <playsDiscipline rdf:resource="#Artistic_Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#CHEN_Yang">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <playsDiscipline rdf:resource="#Athletics"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#MADARASZ_Dora">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Hungary"/>
+  <playsDiscipline rdf:resource="#Table_Tennis"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#RODITI_Matan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <athletePlaysForNOC rdf:resource="#Israel"/>
+  <playsDiscipline rdf:resource="#Marathon_Swimming"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Netherlands_4_x_400m_Relay_Mixed_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#4_x_400m_Relay_Mixed"/>
+  <teamPlaysForNOC rdf:resource="#Netherlands"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#4_x_400m_Relay_Mixed">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Israel_Baseball_Baseball/Softball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Baseball/Softball"/>
+  <playsCategory rdf:resource="#Baseball"/>
+  <teamPlaysForNOC rdf:resource="#Israel"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Israel</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Baseball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Mixed_Relay_Triathlon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Triathlon"/>
+  <playsCategory rdf:resource="#Mixed_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mixed_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Women's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Women's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_Madison">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Australia_Men_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Australia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Group_All-Around">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Israel_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#Israel"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Israel</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Republic_of_Korea_Women_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Volleyball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Republic_of_Korea"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republic_of_Korea</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Egypt_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Egypt"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egypt</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mixed_Team">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Italy_Men's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Men's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#Italy"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_Madison">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Ireland_Men's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Ireland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ireland</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_4_x_200m_Freestyle_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Spain_Women_Hockey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Hockey"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Spain"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_People's_Republic_of_China_Women's_Team_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Women's_Team"/>
+  <teamPlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_Team">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Men_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Latvia_Men_Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Beach_Volleyball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Latvia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plavins/Tocs</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Men's_Team_Artistic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Artistic_Gymnastics"/>
+  <playsCategory rdf:resource="#Men's_Team"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_Team">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Canada_Women's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Women's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Canada"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_4_x_400m_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Australia_Men_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Australia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Poland_Men_3x3_Basketball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#3x3_Basketball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Poland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poland</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Hungary_Men's_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Hungary"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hungary</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_4_x_100m_Medley_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Brazil_Women_Rugby_Sevens">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rugby_Sevens"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Brazil"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Men_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Volleyball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_France_Men's_Épée_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Men's_Épée_Team"/>
+  <teamPlaysForNOC rdf:resource="#France"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_Épée_Team">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Women_Basketball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Basketball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Jamaica_4_x_400m_Relay_Mixed_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#4_x_400m_Relay_Mixed"/>
+  <teamPlaysForNOC rdf:resource="#Jamaica"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamaica</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Honduras_Men_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Honduras"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honduras</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Mexico_Women's_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Women's_Team"/>
+  <teamPlaysForNOC rdf:resource="#Mexico"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Republic_of_Korea_Men_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Republic_of_Korea"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republic_of_Korea</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Women_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Volleyball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Canada_Women's_4_x_100m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Canada"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_4_x_100m_Freestyle_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Poland_Men's_4_x_100m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_100m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Poland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poland</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_4_x_100m_Freestyle_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Dominican_Republic_Baseball_Baseball/Softball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Baseball/Softball"/>
+  <playsCategory rdf:resource="#Baseball"/>
+  <teamPlaysForNOC rdf:resource="#Dominican_Republic"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dominican_Rep.</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_India_Mixed_Doubles_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Mixed_Doubles"/>
+  <teamPlaysForNOC rdf:resource="#India"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACHANTA_Kamal_/_BATRA_Manika</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mixed_Doubles">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Trinidad_and_Tobago_Men's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Trinidad_and_Tobago"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trinidad_&amp;_Tobago</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_4_x_400m_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Ukraine_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#Ukraine"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukraine</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Dominican_Republic_Women_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Volleyball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Dominican_Republic"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dominican_Rep.</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Italy_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#Italy"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Switzerland_Men's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Switzerland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switzerland</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Italy_Women's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Women's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#Italy"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Ukraine_4_x_400m_Relay_Mixed_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#4_x_400m_Relay_Mixed"/>
+  <teamPlaysForNOC rdf:resource="#Ukraine"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukraine</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Great_Britain_Women_Hockey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Hockey"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Great_Britain"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Great_Britain</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Men's_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Italy_Men's_Épée_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Men's_Épée_Team"/>
+  <teamPlaysForNOC rdf:resource="#Italy"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Men's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_France_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#France"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Women_Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Beach_Volleyball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claes/Sponcil</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_France_Duet_Artistic_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Artistic_Swimming"/>
+  <playsCategory rdf:resource="#Duet"/>
+  <teamPlaysForNOC rdf:resource="#France"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Duet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Romania_Mixed_Doubles_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Mixed_Doubles"/>
+  <teamPlaysForNOC rdf:resource="#Romania"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IONESCU_Ovidiu_/_SZOCS_Bernadette</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Sweden_Men_Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Handball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Sweden"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweden</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Belarus_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#Belarus"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belarus</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Sweden_Women_Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Handball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Sweden"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweden</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Hungary_Men_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Hungary"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hungary</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_France_Women's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Women's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#France"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_South_Africa_Men's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#South_Africa"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South_Africa</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Belgium_Women_Basketball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Basketball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Belgium"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belgium</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Brazil_Women's_4_x_100m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Brazil"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_4_x_100m_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Australia_Men's_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Men's_Team"/>
+  <teamPlaysForNOC rdf:resource="#Australia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_ROC_Women's_Foil_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Women's_Foil_Team"/>
+  <teamPlaysForNOC rdf:resource="#ROC"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROC</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_Foil_Team">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Hong_Kong,_China_Women's_Épée_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Women's_Épée_Team"/>
+  <teamPlaysForNOC rdf:resource="#Hong_Kong,_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong_Kong,_China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_Épée_Team">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_South_Africa_Women's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#South_Africa"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South_Africa</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_4_x_200m_Freestyle_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Jamaica_Women's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Women's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Jamaica"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamaica</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Ukraine_Men's_Épée_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Men's_Épée_Team"/>
+  <teamPlaysForNOC rdf:resource="#Ukraine"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukraine</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Republic_of_Korea_Women's_Sabre_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Women's_Sabre_Team"/>
+  <teamPlaysForNOC rdf:resource="#Republic_of_Korea"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republic_of_Korea</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_Sabre_Team">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Baseball_Baseball/Softball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Baseball/Softball"/>
+  <playsCategory rdf:resource="#Baseball"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Republic_of_Korea_Mixed_Doubles_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Mixed_Doubles"/>
+  <teamPlaysForNOC rdf:resource="#Republic_of_Korea"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LEE_Sangsu_/_JEON_Jihee</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Australia_Men's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Men's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#Australia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_France_Men_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Volleyball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#France"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Women_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Mexico_Men_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Mexico"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Chinese_Taipei_Men's_Team_Artistic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Artistic_Gymnastics"/>
+  <playsCategory rdf:resource="#Men's_Team"/>
+  <teamPlaysForNOC rdf:resource="#Chinese_Taipei"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chinese_Taipei</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Australia_Women's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Women's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#Australia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Spain_Men_Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Handball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Spain"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Netherlands_Women's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Women's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Netherlands"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Mongolia_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Mongolia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mongolia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Hong_Kong,_China_Women's_4_x_100m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Hong_Kong,_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong_Kong,_China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Mexico_Men_Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Beach_Volleyball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Mexico"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaxiola/Rubio</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Brazil_4_x_400m_Relay_Mixed_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#4_x_400m_Relay_Mixed"/>
+  <teamPlaysForNOC rdf:resource="#Brazil"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Turkey_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Turkey"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turkey</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Netherlands_Mixed_Relay_Triathlon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Triathlon"/>
+  <playsCategory rdf:resource="#Mixed_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Netherlands"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Poland_Men_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Volleyball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Poland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poland</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Women_Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Handball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Poland_Men's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Men's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#Poland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poland</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Uzbekistan_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#Uzbekistan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uzbekistan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Hungary_Men's_Sabre_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Men's_Sabre_Team"/>
+  <teamPlaysForNOC rdf:resource="#Hungary"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hungary</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_Sabre_Team">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_ROC_Women's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Women's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#ROC"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROC</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Indonesia_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Indonesia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indonesia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_New_Zealand_Men's_Team_Sprint_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Men's_Team_Sprint"/>
+  <teamPlaysForNOC rdf:resource="#New_Zealand"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New_Zealand</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_Team_Sprint">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Tunisia_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Tunisia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tunisia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Belgium_4_x_400m_Relay_Mixed_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#4_x_400m_Relay_Mixed"/>
+  <teamPlaysForNOC rdf:resource="#Belgium"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belgium</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Republic_of_Korea_Women's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Republic_of_Korea"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republic_of_Korea</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_People's_Republic_of_China_Women's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Cuba_Women's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Women's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Cuba"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuba</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Ukraine_Women's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Women's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Ukraine"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukraine</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Men's_Team_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Men's_Team"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Mixed_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Mixed_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Mixed_4_x_100m_Medley_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Brazil_Men's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Brazil"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Men_Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Handball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_People's_Republic_of_China_Women's_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_4_x_100m_Medley_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Italy_Women's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Italy"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_India_Men's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#India"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Men_Rugby_Sevens">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rugby_Sevens"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Jamaica_Women's_4_x_100m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Jamaica"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamaica</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Lithuania_Women's_Team_Sprint_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Women's_Team_Sprint"/>
+  <teamPlaysForNOC rdf:resource="#Lithuania"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lithuania</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Women's_Team_Sprint">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Men's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Men's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Women's_4_x_100m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Australia_Women_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Australia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Men_Rugby_Sevens">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rugby_Sevens"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Baseball_Baseball/Softball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Baseball/Softball"/>
+  <playsCategory rdf:resource="#Baseball"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_France_Men_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#France"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Spain_Women_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Spain"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Women's_Team_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Women's_Team"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Argentina_Men_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Volleyball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Argentina"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentina</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Brazil_Men's_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Brazil"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Jamaica_Men's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Jamaica"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamaica</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Zambia_Women_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Zambia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zambia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_People's_Republic_of_China_Men's_4_x_100m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_100m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Men's_4_x_100m_Relay">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Czech_Republic_Men's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Czech_Republic"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Czech_Republic</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_South_Africa_Women_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#South_Africa"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South_Africa</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Switzerland_Men_Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Beach_Volleyball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Switzerland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heidrich/Gerson</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Men_Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Handball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Netherlands_Women_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Netherlands"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Tunisia_Women's_Sabre_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Women's_Sabre_Team"/>
+  <teamPlaysForNOC rdf:resource="#Tunisia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tunisia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_People's_Republic_of_China_Women_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Argentina_Men_Basketball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Basketball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Argentina"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentina</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Germany_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Germany"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Austria_Women's_Team_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Women's_Team"/>
+  <teamPlaysForNOC rdf:resource="#Austria"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Austria</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Bulgaria_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#Bulgaria"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulgaria</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Kazakhstan_Men's_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Men's_Team"/>
+  <teamPlaysForNOC rdf:resource="#Kazakhstan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kazakhstan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_ROC_Men's_4_x_200m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_200m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#ROC"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROC</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Czech_Republic_Women_Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Beach_Volleyball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Czech_Republic"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hermannova/Slukova</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_France_Women's_Sabre_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Women's_Sabre_Team"/>
+  <teamPlaysForNOC rdf:resource="#France"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Italy_Women's_4_x_100m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Italy"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Italy_Men's_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Italy"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_People's_Republic_of_China_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Men's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Hungary_Mixed_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Mixed_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Hungary"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hungary</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Canada_Women_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Canada"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Ireland_Men_Rugby_Sevens">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rugby_Sevens"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Ireland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ireland</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Spain_Duet_Artistic_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Artistic_Swimming"/>
+  <playsCategory rdf:resource="#Duet"/>
+  <teamPlaysForNOC rdf:resource="#Spain"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Egypt_Women's_Team_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Women's_Team"/>
+  <teamPlaysForNOC rdf:resource="#Egypt"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egypt</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Australia_Women_Rugby_Sevens">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rugby_Sevens"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Australia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_New_Zealand_Men_Hockey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Hockey"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#New_Zealand"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New_Zealand</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Poland_Men_Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Beach_Volleyball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Poland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kantor/Losiak</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_People's_Republic_of_China_Women_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Women's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Women's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Mongolia_Women_3x3_Basketball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#3x3_Basketball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Mongolia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mongolia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Romania_Women_3x3_Basketball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#3x3_Basketball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Romania"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romania</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Brazil_Women_Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Handball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Brazil"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Women's_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Egypt_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#Egypt"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egypt</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Canada_Women_Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Beach_Volleyball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Canada"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pavan/Melissa</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Côte_d'Ivoire_Men_Football">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Football"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Côte_d'Ivoire"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Côte_d’Ivoire</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Mixed_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Mixed_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Hungary_Women's_Team_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Women's_Team"/>
+  <teamPlaysForNOC rdf:resource="#Hungary"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hungary</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Trinidad_and_Tobago_Men's_4_x_100m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_100m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Trinidad_and_Tobago"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trinidad_&amp;_Tobago</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Switzerland_Women_Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Beach_Volleyball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Switzerland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verge-Depre,_A./Heidrich</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Great_Britain_Women's_4_x_100m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Great_Britain"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Great_Britain</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_ROC_Men's_4_x_100m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Men's_4_x_100m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#ROC"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROC</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_ROC_Women's_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Women's_Team"/>
+  <teamPlaysForNOC rdf:resource="#ROC"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROC</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Republic_of_Korea_Baseball_Baseball/Softball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Baseball/Softball"/>
+  <playsCategory rdf:resource="#Baseball"/>
+  <teamPlaysForNOC rdf:resource="#Republic_of_Korea"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republic_of_Korea</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Greece_Mixed_4_x_100m_Medley_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Mixed_4_x_100m_Medley_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Greece"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greece</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_South_Africa_Mixed_Relay_Triathlon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Triathlon"/>
+  <playsCategory rdf:resource="#Mixed_Relay"/>
+  <teamPlaysForNOC rdf:resource="#South_Africa"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South_Africa</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_France_Men's_4_x_400m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_400m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#France"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Great_Britain_Mixed_Relay_Triathlon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Triathlon"/>
+  <playsCategory rdf:resource="#Mixed_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Great_Britain"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Great_Britain</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_People's_Republic_of_China_Women_3x3_Basketball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#3x3_Basketball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Women's_Sabre_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Women's_Sabre_Team"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Argentina_Men_Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Handball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Argentina"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentina</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Croatia_Men_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Croatia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croatia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Azerbaijan_Group_All-Around_Rhythmic_Gymnastics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rhythmic_Gymnastics"/>
+  <playsCategory rdf:resource="#Group_All-Around"/>
+  <teamPlaysForNOC rdf:resource="#Azerbaijan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Azerbaijan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Australia_Mixed_Relay_Triathlon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Triathlon"/>
+  <playsCategory rdf:resource="#Mixed_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Australia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Great_Britain_Women_Rugby_Sevens">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Rugby_Sevens"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Great_Britain"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Great_Britain</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_South_Africa_Men_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#South_Africa"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South_Africa</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Switzerland_Mixed_Relay_Triathlon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Triathlon"/>
+  <playsCategory rdf:resource="#Mixed_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Switzerland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switzerland</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Women_Hockey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Hockey"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Women's_Foil_Team_Fencing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Fencing"/>
+  <playsCategory rdf:resource="#Women's_Foil_Team"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Poland_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Poland"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poland</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Spain_Men_Water_Polo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Water_Polo"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Spain"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Softball_Baseball/Softball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Baseball/Softball"/>
+  <playsCategory rdf:resource="#Softball"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Softball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Bangladesh_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Bangladesh"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangladesh</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Republic_of_Korea_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Republic_of_Korea"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republic_of_Korea</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Canada_Mixed_Team_Archery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Archery"/>
+  <playsCategory rdf:resource="#Mixed_Team"/>
+  <teamPlaysForNOC rdf:resource="#Canada"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Hungary_Women_Handball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Handball"/>
+  <playsCategory rdf:resource="#Women"/>
+  <teamPlaysForNOC rdf:resource="#Hungary"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hungary</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Jamaica_Men's_4_x_100m_Relay_Athletics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Athletics"/>
+  <playsCategory rdf:resource="#Men's_4_x_100m_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Jamaica"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamaica</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Brazil_Men_Beach_Volleyball">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Beach_Volleyball"/>
+  <playsCategory rdf:resource="#Men"/>
+  <teamPlaysForNOC rdf:resource="#Brazil"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alison/Alvaro_Filho</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Mixed_Doubles_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Mixed_Doubles"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIZUTANI_Jun_/_ITO_Mima</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Australia_Women's_4_x_100m_Freestyle_Relay_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Swimming"/>
+  <playsCategory rdf:resource="#Women's_4_x_100m_Freestyle_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Australia"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_United_States_of_America_Women's_Team_Table_Tennis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Table_Tennis"/>
+  <playsCategory rdf:resource="#Women's_Team"/>
+  <teamPlaysForNOC rdf:resource="#United_States_of_America"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United_States</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Canada_Women's_Madison_Cycling_Track">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Cycling_Track"/>
+  <playsCategory rdf:resource="#Women's_Madison"/>
+  <teamPlaysForNOC rdf:resource="#Canada"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_Japan_Mixed_Relay_Triathlon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Triathlon"/>
+  <playsCategory rdf:resource="#Mixed_Relay"/>
+  <teamPlaysForNOC rdf:resource="#Japan"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#Team_People's_Republic_of_China_Team_Artistic_Swimming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <teamPlaysDiscipline rdf:resource="#Artistic_Swimming"/>
+  <teamPlaysForNOC rdf:resource="#People's_Republic_of_China"/>
+  <teamName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</teamName>
+</owl:Thing>
+
+<owl:Thing rdf:about="#HENKEL_Claas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <coachesDiscipline rdf:resource="#Hockey"/>
+</owl:Thing>
+
+
+</rdf:RDF>
